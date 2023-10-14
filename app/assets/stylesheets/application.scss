@@ -1,0 +1,159 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require simple_calendar
+ *= require_tree .
+ *= require_self
+ */
+ * {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
+      Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+      
+  }
+  header {
+    background-color: #0a0809;
+    height: 70px;
+    font-weight: bold;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+  header a {
+    color: white; 
+    text-decoration: none; 
+    justify-content: flex-end;
+  }
+  header a:hover {
+    opacity: 0.6;
+  }
+  header h1 {
+    color: white;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .header-list{height: 30px;
+    background-color: #de1122;
+    justify-content: flex-end;
+    display: flex;
+    text-align:center;
+    
+  }
+  .header-list2 {
+    background-color: #070707;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  header ul {
+    display: flex;
+  }
+  header li {
+    list-style: none;
+    margin-right: 40px;
+  }
+  .wrapper{
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 10px;/*←footerの高さ*/
+    box-sizing: border-box;
+}
+  footer {
+    color: white;
+    height: 40px;
+    background-color: #000;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+  }
+  #drawer {
+    position: relative;
+    flex-direction: column;
+  }
+  .unshown {
+    display:none;
+  }
+  #open {
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+    vertical-align: middle;
+  }
+  #open span, #open span::before, #open span::after {
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #555;
+    display: block;
+    content: "";
+    cursor: pointer;
+  }
+  #open span::before {
+    bottom: -8px;
+  }
+  #open span::after {
+    bottom: -16px;
+  }
+  #close {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    transition: .3s ease-in-out;
+  }
+  #menu-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 90%;
+    max-width: 330px;
+    height: 100%;
+    background:#de1122;
+    transition: .3s ease-in-out;
+    transform: translateX(-105%);
+    color: #070707;
+    font-size:large;
+    display: flex;
+    flex-direction: column;
+  }
+  #input:checked ~ #close {
+    display: block;
+    opacity: .5;
+  }
+  #input:checked ~ #menu-content {
+    transform: translateX(0%);
+    box-shadow: 6px 0 25px rgba(0,0,0,.15);
+  }
+  
+  @media screen and (min-width:480px) {
+    #open {
+      display: none;
+    }
+  }
+  @media screen and (max-width:480px) {.header-list
+    {display: none;}
+    }

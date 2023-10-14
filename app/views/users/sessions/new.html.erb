@@ -1,0 +1,47 @@
+<%= stylesheet_link_tag "logins", :media => "all" %>
+<div class="cont">
+  <div class="form sign-in">
+   <h2>Log in</h2>  
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= render "users/shared/error_messages", resource: resource %>
+  
+
+  <div class="field1">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field2">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em><%= @minimum_password_length %> (characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+
+  <div class="loginsubmit">
+    <button><%= f.submit "Log in" %></button>
+  </div>
+  
+<% end %>
+</div>
+
+<div class="sub-cont">
+<div class="img">
+  <div class="img__text m--up">
+    <h2>New here?</h2>
+    <p>Sign up and discover great amount of new opportunities!</p>
+    <p class="a"><%= render "users/shared/links" %></p>
+  </div>
+  <div class="img__text m--in">
+    <h2>One of us?</h2>
+    <p>If you already has an account, just sign in. We've missed you!</p>
+  </div>
+  
+</div>
+
+
+<a href="https://dribbble.com/shots/3306190-Login-Registration-form" target="_blank" class="icon-link">
+<img src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/256/Dribbble-icon.png">
+</a>

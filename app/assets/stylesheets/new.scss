@@ -1,0 +1,132 @@
+.new{text-align:center;
+background-image: url(newball2.jpg);
+height: 50vmax;
+background-repeat: no-repeat;
+background-size: auto 100%;
+background-size: cover;
+background-position: top;
+font-size: 150%;
+height: 100vmax;
+}
+label{
+background-color: white;
+}
+mark{background-color: white;}
+.a{margin-right:34%;
+margin-top:5%;}
+.b{margin-right: 34%;}
+.c{margin-right: 34%;}
+.d{margin-right: 34%;}
+.e{margin-right: 40%;}
+.title{padding-top: 3%;
+    font-size: 200%;
+    height: 70px;  
+    margin-left:35%;
+    margin-right: 10%;
+    width: 30%;  
+}
+.place{input[type="text"]{
+    width: 40%;
+    height: 30px;
+    font-size:14px;
+    margin-top:3%;
+}
+    margin-top: 3%;
+}
+select#recruit_start_time_1i{
+    height: 40px;
+    width: 10%;
+    margin-top: 1%;
+    font-size: large;
+}
+select#recruit_start_time_2i{
+    height: 40px;
+    font-size: large;
+}
+select#recruit_start_time_3i{
+    height: 40px;
+    width: 10%;
+    font-size: large;
+}
+select#recruit_start_time_4i{
+    height: 40px;
+    width: 10%;
+    font-size: large;
+}
+select#recruit_start_time_5i{
+    height: 40px;
+    width: 10%;
+    font-size: large;
+}
+.comment{margin-top: 3%;
+    input[type="text"]{
+        width: 40%;
+        height: 80px;
+        font-size:14px;
+        margin-top:10px;
+    }
+}
+
+.toko-submit input[type="submit" i] {
+    width: 10%;
+    height: 40px;
+    margin-top: 1%;
+    font-size: 20px;
+    background-color: red;
+    margin-left: 45%;
+}
+.z input#recruit_place{
+    margin-left: 30%;
+    background-color: white;
+
+    width: 500px;
+    height: 40px;
+}
+.y input#recruit_comment{
+    margin-left: 30%;
+    background-color: white;
+}
+select#recruit_level{
+    margin-left: 0%;
+    background-color: white;
+    font-size: large;
+    width: 500px;
+    height: 40px;
+    margin-top: 3%;
+}
+select#recruit_status{
+    margin-left: 0%;
+    background-color: white;
+    font-size: large;
+    width: 500px;
+    height: 40px;
+    margin-top: 3%;
+}
+.modoru{background-color: wheat;}
+@media screen and (max-width:480px) {
+    .new{font-size: 8px;
+        height: 130vmax;
+    }
+    .place{width: 10%;
+margin-top: 2%;
+height: 10vh;
+}
+    select#recruit_start_time_1i{
+        width: 50vh;
+        padding: 1px;
+    }
+    select#recruit_start_time_2i{
+        width: 50vh;
+    }
+    select#recruit_start_time_3i{
+        width: 50vh;
+    } select#recruit_start_time_4i{
+        width: 50vh;
+    } select#recruit_start_time_5i{
+        width: 50vh;
+    }
+    .y{width: 50vh;}
+    .toko-submit{
+        width: 55vh;
+    }
+}

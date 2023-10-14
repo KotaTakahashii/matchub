@@ -1,0 +1,67 @@
+<%= stylesheet_link_tag "mypages", :media => "all" %>
+<div class="mypage">
+  <div class="myimage">
+  <% if current_user.id == @user.id %>
+    <div class="visitlink">
+      <h1>MyPage</h1>
+      <mark><%= link_to "編集する", edit_user_registration_path %></mark>
+    </div>
+  <% else %>
+    <h1>TeamPage</h1>
+  <% end %>
+    <%= image_tag @user.image_url, size: "160x120" if @user.image? %>
+  </div>
+  <div class="teamname">
+    <mark>チーム名 </mark>: <%= @user.name %>
+  </div>
+<% if current_user.id == @user.id %>
+  <div class="mailadress">
+    <mark>メールアドレス</mark> : <%= @user.email %>
+    </div>
+<% end %>
+  <div class="insta">
+    <div class="visitlink">
+      <mark>インスタアカウント</mark>:<mark><%= link_to "ここをクリック", @user.instagram %></mark>
+    </div>
+  </div>
+  <div class="pl">
+    <mark>活動場所</mark> : <%= @user.activeplace %>
+  </div>
+  <div class="day">
+    <mark>活動日</mark> : <%= @user.activeday %>
+  </div>
+  <div class="achi">
+    <mark>戦績</mark> : <%= @user.achievement %>
+  </div>
+  
+  <% @user.recruits.each do |t| %>
+    <div class="recruit">
+      <div class='form1'>
+        <div class='image'>
+          <%= image_tag t.user.image_url, size: "80x80" if t.user.image? %>
+        </div>
+        <%= link_to t.user.name, user_path(t.user.id) %> 
+        <%= t.created_at %>
+        <%= t.status %>
+      </div>
+      <div class=comment>
+        <p>コメント：<%= t.comment %></p>
+      </div>
+      <div class=form2>
+        <p> 球場:<%= t.place %></p>
+        <p>開始時間:<%= t.start_time %></p>
+        <p>求めるレベル:<%= t.level %></p>
+      </div>
+      <div class=form3>
+        <%= link_to "詳細へ",recruit_path(t.id) %>
+      <% if user_signed_in? && current_user.id == t.user_id %>
+        <%= link_to "編集する", edit_recruit_path(t.id) %>
+        <%= link_to "削除する", recruit_path(t.id), method: :delete %>
+      <% end %>
+      </div>
+    </div>
+  <% end %>
+  <div class="shita">
+    <%= link_to "募集試合一覧に戻る", recruits_path %>
+  </div>
+</div>

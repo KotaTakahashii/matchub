@@ -1,0 +1,22 @@
+<head>
+<%= stylesheet_link_tag "tops", :media => "all" %>
+</head>
+<div class="calendercontainer">
+<div class="calender">
+<%= month_calendar events: @recruits do |date, recruits| %>
+    <%= date.day %>
+  
+    <% recruits.each do |recruit| %>
+      <div class="plan">
+      <% if user_signed_in? %>
+        <%= link_to recruit.user.name, recruit %>  
+        <%= link_to recruit.place, recruit %>  
+      <% else %>
+        <%= link_to recruit.user.name, new_user_session_path %>  
+        <%= link_to recruit.place, new_user_session_path %> 
+      <% end %>
+      </div>
+    <% end %>
+  </div>
+  </div>
+  <% end %>

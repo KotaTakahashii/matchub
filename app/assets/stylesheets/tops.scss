@@ -1,0 +1,25 @@
+.calendercontainer {
+    background-image: url(homeplate.jpg);
+    background-size: cover;
+    padding-top: 50px;
+}
+@media screen and (max-width: 480px) {
+    .calendercontainer {
+      /* スマホ表示では横幅いっぱいに表示する */
+      width: 200%;
+      padding: 1px;
+    }
+}
+
+.calender {
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 30px;
+    background-color:wheat
+}
+@media screen and (max-width: 480px) {
+    .calender {
+      /* スマホ表示では横幅いっぱいに表示する */
+      font-size: 10px;
+    }
+}

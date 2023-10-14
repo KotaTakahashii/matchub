@@ -1,0 +1,84 @@
+.edit{font-size: 20px;
+background-image: url(ballfield.jpg);
+background-size: cover;
+height: 150vmax;}
+.editt{text-align: right;}
+.teamname{input[type="text"]{
+    width: 40%;
+    height: 30px;
+    font-size:14px;
+    margin-top:10px;
+    background-color: white;
+}}
+.day{input[type="text"]{
+    width: 40%;
+    height: 30px;
+    font-size:14px;
+    margin-top:10px;
+    background-color: white;
+}}
+.pl{input[type="text"]{
+    width: 40%;
+    height: 30px;
+    font-size:14px;
+    margin-top:10px;
+    background-color: white;
+}}
+.achi{input[type="text"]{
+    width: 40%;
+    height: 60px;
+    font-size:14px;
+    margin-top:10px;
+    background-color: white;
+}}
+
+.insta{input[type="text"]{
+    width: 40%;
+    height: 30px;
+    font-size:14px;
+    margin-top:10px;
+    background-color: white;
+}}
+.mailadress{input[type="text"]{
+    width: 40%;
+    height: 30px;
+    font-size:14px;
+    margin-top:10px;background-color: white;
+}}
+.pass input#user_password{
+    width: 20%;
+    height: 30px;
+    font-size:14px;
+    margin-top:10px;background-color: white;
+    margin-left: 30%;
+}
+.passwordconf input#user_password_confirmation{
+    width: 20%;
+    height: 30px;
+    font-size:14px;
+    margin-top:10px;background-color: white;
+    margin-left:30% ;
+}
+.currentpass input#user_current_password{
+    width: 20%;
+    height: 30px;
+    font-size:14px;
+    margin-top:10px;background-color: white;
+    margin-left: 30%;
+}
+.sonota{text-align: center;
+margin-top: 3%;}
+.pageupdate input[type="submit" i] {
+    width: 10%;
+    height: 40px;
+    margin-top: 1%;
+    font-size: 20px;
+    background-color: red;
+    margin-left: 45%;
+}
+.pageupdate:hover {
+    opacity: 0.6;
+  }
+.kouta button:hover{
+    opacity: 0.6;
+}

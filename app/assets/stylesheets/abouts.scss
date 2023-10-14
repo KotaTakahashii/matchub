@@ -1,0 +1,43 @@
+.about{  text-shadow:
+    1px 1px 0px #000, -1px -1px 0px #000,
+   -1px 1px 0px #000,  1px -1px 0px #000,
+    1px 0px 0px #000, -1px  0px 0px #000,
+    0px 1px 0px #000,  0px -1px 0px #000;
+    font-size: large;
+text-align: center;
+}
+.explanation{background-image: url(ballA.jpg);
+color: antiquewhite;
+height: 30vmax;
+width: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 80% center;
+text-align: center;
+}
+.expl{margin-top: 3%;}
+.step1{background-image: url(waiting.jpg);
+    background-size: cover;
+color: antiquewhite;
+height: 30vmax;
+justify-content: space-between;
+}
+.sstep1{padding-top: 3%;}
+.step2{background-image: url(bat.jpg);
+background-size: cover;
+color:antiquewhite;
+height: 30vmax;
+background-position: 80% center;
+}
+.sstep2{padding-top: 3%;}
+.step3{background-image: url(glove.jpg);
+background-size: cover;
+color: antiquewhite;
+height: 30vmax;
+background-position: 80% center;
+}
+.sstep3{padding-top: 3%;}
+@media screen and (max-width:480px) {
+    .about{font-size: 10px;
+    color: black;}
+    }

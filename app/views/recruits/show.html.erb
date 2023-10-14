@@ -1,0 +1,26 @@
+<div class="shosho">
+  <h1 class=shosai><mark>募集試合詳細</mark></h1>
+  <div class="recruitshow">
+    <div class="topblock">
+      <p>チーム名：<%= link_to @recruit.user.name, user_path(@recruit.user.id) %></p> 
+      <p>募集状況：<%= @recruit.status %></p>
+      <p>DMはこちら→ <%= link_to "インスタチームアカウント", @recruit.user.instagram %></p>
+    </div>
+    <div class="commentblock">
+      <p>コメント：<%= @recruit.comment %></p>
+    </div>
+    <div class="secondblock">
+      <div class="imageblock">
+        <%= image_tag @recruit.user.image_url, size: "100vh" if @recruit.user.image? %>
+      </div>
+        <div class="thirdblock">
+          <p class="bo">開始日時：<%= @recruit.start_time %></p>
+          <p class="bo">場所：<%= @recruit.place %></p>
+          <p>希望レベル：<%= @recruit.level %></p>
+        </div>
+        <div class="ww">
+          <%= link_to "検索一覧に戻る", recruits_path %>
+        </div>
+    </div>
+  </div> 
+</div>

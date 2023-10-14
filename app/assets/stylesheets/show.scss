@@ -1,0 +1,49 @@
+.shosai{margin-left:40%;
+padding-top: 3%;}
+.topblock{display: flex;
+justify-content: space-around;}
+.secondblock{display: flex;
+padding-bottom: 3%;}
+.imageblock{width: 40%;
+margin-left: 5%;}
+.thirdblock{width: 50%;
+border: solid;
+border-color: green;
+height: 90px;}
+.commentblock{height: 50px;}
+.recruitshow{background-color:burlywood ;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    color:black;
+    font-size: larger;
+    }
+.ww{padding: 50px;}
+.shosho{background-image: url(yuuhi.jpg);
+    background-size: 100%;
+    height: 100vh;
+background-position: 60% bottom;}
+.bo{border-bottom: solid;
+border-color: green;}
+@media screen and (max-width:480px) {
+    .shosho{font-size: 3px;
+        display: flex;
+        flex-direction: column;
+    }
+    .topblock{
+        display: flex;
+        flex-direction: column;
+    }
+    .ww{
+        font-size: small;
+    }
+    .thirdblock{
+        height: 30vh;
+        font-size: 2px;
+        width: 120vh;
+    }
+    .ww{
+        width: 50vh;
+    }
+    }

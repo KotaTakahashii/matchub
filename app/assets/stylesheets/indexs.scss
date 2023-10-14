@@ -1,0 +1,45 @@
+.index{display: flex;
+    text-align:center;
+    }
+.recruits-container{width: 70%;
+    background-image: url(kusa.jpg);
+    background-repeat:no-repeat; 
+    background-size:cover; 
+    }
+.k{background-color: #de1122;
+width: 50%;
+color: white;}
+.recruit{background-color:burlywood ;
+margin-left: 10%;
+margin-right: 10%;
+margin-bottom: 5%;
+margin-top: 5%;
+color:white;
+}
+.image{margin: 1%;}
+.search{background-image: url(boy);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 35% top ;
+width: 30%;
+height: 100vh;
+position: sticky;
+left:70%;
+top:0
+}
+.searching{background-color: #de1122;
+width: 50%;
+color: white;}
+input#search{background-color: white;
+border: solid;
+width:100%;
+margin-top: 10%;
+}
+.kensakubutton input,button{border: solid;
+width: 40%;
+background-color: white;
+margin-left: 60%;
+}
+.jouken{color: #de1122 ;
+background-color: white;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}

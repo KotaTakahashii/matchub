@@ -1,0 +1,52 @@
+<%= stylesheet_link_tag "indexs", :media => "all" %>
+
+<div class='index'>
+  
+  <div class="recruits-container">
+    <div class="k">
+      <h3>募集試合一覧</h3>
+    </div> 
+    <% @recruits.each do |t| %>
+      <div class="recruit">
+        <div class='form1'>
+          <div class='image'>
+            <%= image_tag t.user.image_url, size: "80x80" if t.user.image? %>
+          </div>
+          <%= link_to t.user.name, user_path(t.user.id) %> 
+          <%= t.created_at %>
+          <%= t.status %>
+        </div>
+        <div class=comment>
+          <p>コメント：<%= t.comment %></p>
+        </div>
+        <div class=form2>
+          <p> 球場:<%= t.place %></p>
+          <p>開始時間:<%= t.start_time %></p>
+          <p>求めるレベル:<%= t.level %></p>
+        </div>
+        <div class=form3>
+          <%= link_to "詳細へ",recruit_path(t.id) %>
+        <% if user_signed_in? && current_user.id == t.user_id %>
+          <%= link_to "編集する", edit_recruit_path(t.id) %>
+          <%= link_to "削除する", recruit_path(t.id), method: :delete %>
+        <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div> 
+  
+  <div class='search'> 
+    <div class='searching'> 
+      <h3>練習試合を検索</h3>
+    </div>
+  <div class="kensaku">
+    <p class="jouken"> 場所と開始日時(半角 月-日付)で検索できます</p>
+    <%= form_tag({controller:"recruits",action:"index"}, method: :get) do %>
+    <%= text_field_tag :search %>
+    <div class="kensakubutton">
+      <%= submit_tag '検索する'  %>
+    <div>
+    <% end %>
+  </div>
+
+</div>

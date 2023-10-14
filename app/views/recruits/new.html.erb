@@ -1,0 +1,58 @@
+<%= stylesheet_link_tag "new", :media => "all" %>
+<div class='new'>
+    <div class='title'>
+        <mark>新規投稿ページ</mark>
+    </div>
+<%= form_for @recruit do |f| %>
+    <div class="place">
+        <div class="a">    
+            <%= f.label :試合を行う球場 %>
+        </div>
+        <div class="z">
+            <%= f.text_field :place, :size => 40 %>
+        </z>
+    </div>
+    
+
+    <div class="time">
+        <div class="b">    
+            <%= f.label :試合開始日時 %>
+        </div>
+        <%= f.datetime_select :start_time, :size => 60 %>
+    </div>
+
+    <div class="lebel">
+        <div class="c">    
+            <%= f.label :求めるレベル %>
+        </div>
+        <div class="levelselect">
+        <%= f.select :level,
+        [["特に気にしない","特に気にしない"],["初心者多め","初心者多め"],["大会入賞実績あり","大会入賞実績あり"],["大会優勝実績あり","大会優勝実績あり"]],include_blank: "選択して下さい" %>
+        </div>    
+    </div>
+    
+    <div class="status">
+        <div class="d">
+            <%= f.label :募集ステータス  %>
+        </div>
+      <%= f.select :status,
+        [["募集中","募集中"],["交渉中","交渉中"]],include_blank: "選択して下さい" %>
+    </div>
+
+    <div class="comment">
+        <div class="e">
+            <%= f.label :コメント %>
+        </div>
+        <div class="y">
+            <%= f.text_field :comment, :size => 100 %>
+        </div>
+    </div>
+
+    <div class="toko-submit">
+        <%= f.submit "投稿する"%>
+    </div>
+<% end %>
+    <div class="modoru"> 
+        <%= link_to "一覧に戻る", recruits_path %>
+    </div>
+</div>
